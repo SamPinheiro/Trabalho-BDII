@@ -1,0 +1,61 @@
+@import "grid.scss";
+@import "variables.scss";
+@import "nav.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    font-family: monospace;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 40px;
+    a {
+        color: $black-color;
+        text-decoration: none;
+    }
+    
+    a:hover { 
+        color: $purple-color;
+    }
+}
+
+section {
+    margin-top: 50px;
+}
+
+.card {
+    img {
+        transition: all ease 0.5s;
+        border-radius: 1%;
+    }
+
+    img:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: $black-color;
+    height: 40px;
+    text-align: center;
+    p {
+        color: $white-color;
+        font-size: 20px;
+    }
+}
+
+
+

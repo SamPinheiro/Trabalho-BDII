@@ -1,0 +1,114 @@
+@import "variables.scss";
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $black-color;
+    height: 80px;
+
+    .logo {
+        a {
+            color: $white-color;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $purple-color;
+        }
+    }
+     
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+        list-style: none;
+        li {
+            margin: 0 20px;
+            a {
+                color: $white-color;
+                font-size: 30px;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                color: $purple-color;
+            }
+        }
+        
+    }
+
+    .burguer {
+        display: none;
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: $white-color;
+            margin: 5px;
+            transition: all ease 0.4s;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .burguer {
+        display: block !important;
+    }
+
+    .navLinks {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: $black-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+        li {
+            opacity: 0;
+        }
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 380px) {
+    .navLinks li a {
+        font-size: 20px;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle{
+    .line1 {
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .line2 {
+        opacity: 0;
+    }
+    .line3 {
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+} 

@@ -1,0 +1,107 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 80px;
+}
+
+header .logo a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+header .logo a:hover {
+  color: #9900FF;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  list-style: none;
+}
+
+header ul li {
+  margin: 0 20px;
+}
+
+header ul li a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: #9900FF;
+}
+
+header .burguer {
+  display: none;
+}
+
+header .burguer div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all ease 0.4s;
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burguer {
+    display: block !important;
+  }
+  .navLinks {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navLinks li {
+    opacity: 0;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 380px) {
+  .navLinks li a {
+    font-size: 20px;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
