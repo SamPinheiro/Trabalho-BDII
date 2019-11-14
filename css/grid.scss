@@ -341,3 +341,12 @@ section{
         }
     }
 }
+
+#itemsC {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    div {
+        margin: 20px 20px;
+    }
+}

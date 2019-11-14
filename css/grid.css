@@ -299,3 +299,13 @@ section {
     grid-row: 6/6;
   }
 }
+
+#itemsC {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+#itemsC div {
+  margin: 20px 20px;
+}
